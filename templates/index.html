@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hungry in Chapel Hill</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/index.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <span id="logo">Hungry in Chapel Hill</span>
+                <ul id="links" class="hidden">
+                    <li>About</li>
+                    <li>Post Food</li>
+                </ul>
+                <button onclick="toggle()">
+                    <img src="../images/open-menu-6208.svg" alt="">
+                </button>
+            </nav>
+
+            <a href="#content" id="contentLink">Looking for free food in Chapel Hill? Click here</a>
+        </header>
+
+        <section id="content">
+            {%for i in test%}
+            
+            <li>{{i}}</li>
+            {%endfor%}
+        </section>
+        <!--<form action="test" method="post">
+            <input type="text" name="name" id="name">
+            <input type="submit" value="Submit" />
+        </form>-->
+        <script src="../js/index.js"></script>
+    </body>
+</html>
