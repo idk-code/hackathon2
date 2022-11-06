@@ -1,7 +1,6 @@
 # Flask Setup
 from oauth2client.service_account import ServiceAccountCredentials
 import gspread
-import os
 from flask import Flask, jsonify, request, abort
 from flask import render_template
 app = Flask(__name__)
@@ -31,3 +30,4 @@ def hello_world():
         timestamps.append(x['Timestamp'])
     return render_template('index.html', test=timestamps)
 
+app.run()
