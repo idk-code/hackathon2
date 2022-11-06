@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/berries-g5442f3a00_1920.jpg);
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+}
+nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: rgb(0, 32, 74);
+    color: white;
+    padding: 5px;
+    text-align: left;
+}
+nav #logo {
+    text-align: left;
+    font-size: 1.5rem;
+}
+nav button {
+    float: right;
+    background: none;
+    border: none;
+}
+nav img {
+    width: 36px;
+    margin-right: auto;
+}
+nav ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+nav ul.responsive {
+    max-height: 100px;
+}
+/*nav ul.hidden {
+    display: none;
+}*/
+nav ul li {
+    margin: 15px 0;
+    list-style-type: none;
+}
+nav ul li a {
+    text-decoration: none;
+    color: rgb(245, 144, 42);
+}
+header p {
+    color: white;
+    font-size: 1.5rem;
+    max-width: 300px;
+}
+header a#contentLink {
+    /*text-decoration: none;
+    padding: 8px;
+    border-radius: 8px;
+    color: rgb(249, 249, 249);
+    background-color: rgb(140, 14, 14);*/
+    color: white;
+    align-self: end;
+    position: absolute;
+    bottom: 100px;
+    text-decoration: none;
+}
+header a#contentLink img {
+    width: 36px;
+}
+
+section article {
+    width: 100%;
+    padding: 10px;
+    margin: 0 auto;
+    position: relative;
+    background-color: rgb(234, 222, 222);
+    border: 0.5px solid black;
+    /*border-radius: 6px;*/
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+section article div.hideDetails {
+    display: none;
+}
+section article button {
+    width: 100%;
+    /*position: absolute;
+    top: 0;
+    right: 6%;*/
+    color: orange;
+    font-size: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}

@@ -1,8 +1,10 @@
 # Flask Setup
 from oauth2client.service_account import ServiceAccountCredentials
 import gspread
+from datetime import datetime
 from flask import Flask, jsonify, request, abort
 from flask import render_template
+from collections import OrderedDict
 app = Flask(__name__)
 
 # Google Sheets API Setup
@@ -17,17 +19,19 @@ gsheet = client.open("Hungry in Chapel Hill").sheet1
 # An example GET Route to get all reviews
 
 
-@app.route('/test')
-def all_reviews():
-    print(gsheet.get_all_records())
-    return jsonify(gsheet.get_all_records())
+
 @app.route("/")
-def hello_world():
+def index():
     print(gsheet.get_all_records())
-    #print(gsheet.get_all_records()[0]['Timestamp'])
-    timestamps = []
+    myData = []
+    gsheet.sort((5, 'asc'))
     for x in gsheet.get_all_records():
-        timestamps.append(x['Timestamp'])
-    return render_template('index.html', test=timestamps)
+        #print(x['Date'])
+        myData.append(x)
+    return render_template('index.html', test=myData)
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
 app.run()
