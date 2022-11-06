@@ -8,7 +8,7 @@ html, body {
 header {
     width: 100%;
     min-height: 100vh;
-    background-image: url(../images/berries-g5442f3a00_1920.jpg);
+    /*background-image: url(../images/berries-g5442f3a00_1920.jpg);*/
 }
 nav {
     width: 100%;
