@@ -32,6 +32,7 @@ nav {
 nav #logo {
     text-align: left;
     font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
 }
 nav button {
     float: right;
