@@ -1,10 +1,8 @@
 # Flask Setup
 from oauth2client.service_account import ServiceAccountCredentials
 import gspread
-from datetime import datetime
 from flask import Flask, jsonify, request, abort
 from flask import render_template
-from collections import OrderedDict
 app = Flask(__name__)
 
 # Google Sheets API Setup
@@ -34,4 +32,6 @@ def index():
 def about():
     return render_template('about.html')
 
-app.run()
+
+if __name__ == '__main__':
+    app.run(host='127.0.0.1', port=8080, debug=True)
