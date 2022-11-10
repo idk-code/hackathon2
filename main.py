@@ -24,7 +24,6 @@ def index():
     myData = []
     gsheet.sort((5, 'asc'))
     for x in gsheet.get_all_records():
-        #print(x['Date'])
         myData.append(x)
     return render_template('index.html', test=myData)
 
